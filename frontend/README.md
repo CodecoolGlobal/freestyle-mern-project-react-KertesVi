@@ -17,25 +17,42 @@ Currently, two official plugins are available:
 - password
 - email
 - validation: success message Or existing name choose another name // welcome page
-- after logging in, auto-route to myList
-- Szervusz Pista: előzőleg választott listád HERE, módosítasz vagy marad?
 
 
 ## Page3 Choose from list 
-- categories (destination, food - drink to try, extreme sports, )
+- categories (breed )
 - POST method - add items to the list
 
 
-## Page1 Mylist if logged in 
+## Page1 MyCats if logged in 
 - GET method - show list
 1 item on the list : - title: -category,  (ez akár to save, és menjen az adatbázisba)
 
 
 
-## Database
+
+## api calls for catlist
+    -get
+    -patch
+    -put
+    -delete
+
+## Database catList
     -_id
-    -username
-    -password
+    -name
+    -sex
+    -age
+    -location
+    -picture/optional
+    -breed/apiCall
+    -dollars
+    
+
+## Database userList 
+    -_id
+    -name
+    -age
+    -phone
     -email
-    -myList
-        title, location, date, editable, saveabele
+    -location
+    -how many cats do you have at home?
