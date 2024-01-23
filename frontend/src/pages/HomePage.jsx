@@ -1,9 +1,9 @@
-
+import Navbar from "../Components/Navbar.jsx"
 
 export default function HomePage(){
     return (
         <>
-        <button>Home</button>
+     <div>HomePage</div>
         </>
     )
 }

@@ -1,16 +1,10 @@
 // import React, { useState } from 'react'
 
-
-function LandingPage() {
-
+export default function LandingPage() {
   return (
-    <>
-      <div>
-       Hello LandingPage
-      </div>
-    
-    </>
+  <div className="LandingPage">
+  <h1></h1>
+  </div>
   )
 }
 
-export default LandingPage
