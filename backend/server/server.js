@@ -7,11 +7,11 @@ mongoose.connect(
 import Adoptedcat from "./model/Adoptedcat.js";
 
 Adoptedcat.create({
-    name: "Fluffy",
-    sex: "female",
-    age: 2,
+    name: "Snowball",
+    sex: "male",
+    age: 3,
     location: "home",
-    picture: "adopted2.png",
+    picture: "adopted3.png",
     breed: "Aegean",
     dollars: 0,
 })
