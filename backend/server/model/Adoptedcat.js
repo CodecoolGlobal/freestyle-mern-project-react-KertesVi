@@ -6,7 +6,7 @@ const adoptedcatSchema = new Schema({
     sex: String,
     age: Number,
     location: String,
-    picture: Image,
+    picture: String,
     breed: String,
     dollars: Number,
     
