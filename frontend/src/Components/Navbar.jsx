@@ -13,7 +13,7 @@ export default function Navbar() {
       <Link to={"/aboutus"} >
       <button>AboutUs</button>
       </Link>
-      <Link to={"/adopedcats"} >
+      <Link to={"/adoptedcats"} >
       <button>Cats with new home!</button>
       </Link>
     </nav>

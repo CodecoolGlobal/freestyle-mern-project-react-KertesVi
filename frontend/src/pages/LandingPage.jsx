@@ -3,7 +3,15 @@
 export default function LandingPage() {
   return (
   <div className="LandingPage">
-  <h1>Heelooooo</h1>
+    
+    <div className="greetings">
+
+    </div>
+
+    <div className="decoration">
+    <img></img>
+    </div>
+
   </div>
   )
 }
