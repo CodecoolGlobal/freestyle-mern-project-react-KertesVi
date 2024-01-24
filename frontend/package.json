@@ -1,4 +1,4 @@
-{
+{ "proxy": "http://localhost:3000",
   "name": "latest",
   "private": true,
   "version": "0.0.0",
