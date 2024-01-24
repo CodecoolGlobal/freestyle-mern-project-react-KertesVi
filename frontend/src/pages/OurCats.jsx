@@ -23,7 +23,8 @@ export default function OurCats(){
      
       {catData && catData.map((cat) => (
         <div key={cat._id}>
-            <li><p> <strong>The cat name is {cat.name} </strong></p></li>
+            <ul><li><p> <strong>Name: {cat.name} </strong></p></li>
+            <li>Breed {cat.breed}</li></ul>
         </div>
       ))}
     </div>
