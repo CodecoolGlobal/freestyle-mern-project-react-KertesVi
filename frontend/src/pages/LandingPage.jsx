@@ -1,31 +1,41 @@
-import './LandingPage.scss'
+import "./LandingPage.scss";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
+
   return (
     <>
       <div className="section first cat">
-        <h2>Second chance at a <span className="other-text">loving</span> life</h2>
+        <Link to={"/home"}>
+          <h2>
+            Second chance at a <span className="other-text">loving</span> life
+          </h2>
+        </Link>
       </div>
-      <div className="section second"></div>
-      <div className="section third cat"></div>
-      <div className="section fourth"></div>
-      <div className="section fifth cat"></div>
-      <div className="section sixth"></div>
-      <div className="section seventh cat"></div>
 
-      {/* <div className="cat">
-        <div className="ear ear--left"></div>
-        <div className="ear ear--right"></div>
-        <div className="face">
-          <div className="eye eye--left">
-            <div className="eye-pupil"></div>
-          </div>
-          <div className="eye eye--right">
-            <div className="eye-pupil"></div>
-          </div>
-          <div className="muzzle"></div>
-        </div>
-      </div> */}
+      <div className="section second">
+        <Link to={"/aboutus"}>
+          <p>About Us</p>
+        </Link>
+      </div>
+
+      <div className="section third cat"></div>
+
+      <div className="section fourth">   
+        <Link to={"/adoptedcats"}>
+          <p>Adopt a cat</p>
+        </Link>
+      </div>
+    
+      <div className="section fifth cat"></div>
+
+      <div className="section sixth">
+        <Link to={"/donate"}>
+          <p>Donate for a better life</p>
+        </Link>
+      </div>
+
+      <div className="section seventh cat"></div>
     </>
   );
 }
