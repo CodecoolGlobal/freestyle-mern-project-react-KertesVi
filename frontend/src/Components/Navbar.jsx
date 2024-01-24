@@ -2,15 +2,21 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
+
     <nav className="Navbar">
-      <Link to={"/home"} />
+      <Link to={"/home"} >
       <button>Home</button>
-      <Link to={"/login"} />
+      </Link>
+      <Link to={"/login"} >
       <button>Login</button>
-      <Link to={"/aboutus"} />
+      </Link>
+      <Link to={"/aboutus"} >
       <button>AboutUs</button>
-      <Link to={"/adopedcats"} />
+      </Link>
+      <Link to={"/adopedcats"} >
       <button>Cats with new home!</button>
+      </Link>
     </nav>
-  );
+   
+  )
 }
