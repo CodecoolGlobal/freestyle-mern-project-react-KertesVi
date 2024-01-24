@@ -8,6 +8,11 @@ body {
     align-items: center;
   }
   
+  .title {
+    margin: 40px 0; 
+    font-weight: bold;
+  }
+
   .container {
     display: flex;
     justify-content: center;
