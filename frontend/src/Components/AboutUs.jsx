@@ -1,7 +1,20 @@
 
+import React, { useState } from "react";
 
 export default function AboutUs(){
-
+    const [catData, setCatData] = useState(null);
+    const fetchData = async () => {
+        try {
+          const response = await fetch("/api/cats");
+          const dataJson = await response.json();
+          
+          setCatData(dataJson);
+          console.log(dataJson);
+        } catch (error) {
+          console.log("Error fetching data", error);
+        }
+      };
+      fetchData();
     return (
         <div>
             <h1>Welcome to PurrHaven!</h1>
@@ -11,7 +24,17 @@ export default function AboutUs(){
         Choose adoption or donation and be a part of our mission to provide each cat with the care and attention they deserve.
         Join us in creating a world where every cat has a warm and loving home. Make PurrHaven your first stop in the journey of unconditional love!</h2>
         <img src="/images/cat.png" alt='PurrHaven'/>
+
+        <div className="catlist">
+        <div className="todoList"></div>
+      {catData && catData.map((cat) => (
+        <div key={cat._id}>
+            <li><p> <strong>The cat name is {cat.name} </strong></p></li>
         </div>
+      ))}
+    </div>
+        </div>
+     
         
          
         
