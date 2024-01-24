@@ -8,7 +8,6 @@ import Login from './pages/Login.jsx'
 import Layout from './Components/Layout.jsx'
 import AboutUs from './Components/AboutUs.jsx'
 import AdoptedCats from './pages/AdoptedCats.jsx'
-import LetsPlay from './pages/LetsPlay.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -21,8 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='aboutus' element={<AboutUs/>}></Route>
       <Route path='login' element={<Login/>}></Route>
       <Route path='adoptedcats' element={<AdoptedCats/>}></Route>
-      <Route path='play' element={<LetsPlay/>}></Route>
-     </Route></Routes>
+      </Route></Routes>
     </BrowserRouter>
   </React.StrictMode>
 )
