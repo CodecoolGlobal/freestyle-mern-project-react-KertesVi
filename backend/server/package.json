@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mongoose": "^8.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }, 
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "type": "module"
+}
