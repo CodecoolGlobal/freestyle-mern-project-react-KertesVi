@@ -11,20 +11,18 @@ app.use(express.json());
 mongoose.connect(DBString);
 
 
-app.get("/api/cats/all", (req, res) => {
-    cat.find(
-        {}, {
-        ObjectId: true,
-        name: true,
-        sex: true,
-        age: true,
-        location: true,
-        picture: true,
-        breed: true,
-        dollars: true
-    })
-        .then(cats => res.json(cats))
-        .catch(err => console.log(err));
+app.get("/api/cats", async (req, res) => {
+    try {
+        const cats = await cat.find(
+            {} 
+        )
+        console.log(cats);
+        res.json(cats)
+    } catch (error) {
+        console.error(error);
+        throw new Error (error.message)
+    }
+        
 
 })
 
