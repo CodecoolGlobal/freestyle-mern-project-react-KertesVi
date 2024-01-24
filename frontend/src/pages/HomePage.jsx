@@ -1,9 +1,9 @@
-import Navbar from "../Components/Navbar.jsx"
+import './HomePage.scss'
 
-export default function HomePage(){
+export default function HomePage() {
     return (
-        <>
-     <div>HomePage</div>
-        </>
-    )
-}
+      <>
+   
+      </>
+    );
+  }
