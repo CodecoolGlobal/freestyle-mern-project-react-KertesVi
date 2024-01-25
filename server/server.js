@@ -14,6 +14,19 @@ app.use(express.json());
 
 const PORT = 4000;
 
+// app.get("/api/homepage/:username", (req, res) => {
+//   const username = req.params.username
+//   User.findOne({username: username})
+//   .then((user) => {
+//     console.log(user)
+//     res.json(user)
+//   })
+//   .catch((error) => console.error(error));
+// });
+
+
+
+
 app.post("/api/signup", (req, res) => {
   const { username, email, password, phone, address, fullname } = req.body;
 

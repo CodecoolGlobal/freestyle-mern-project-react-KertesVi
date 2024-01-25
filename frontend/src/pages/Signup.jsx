@@ -1,32 +1,18 @@
+
 import "./Signup.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import HomePage from "./HomePage.jsx";
+
 
 export default function Registration() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
-  const [phone, setPhone] = useState(null);
+  const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/signup");
-        if (!response.ok) {
-          console.error("Network response was not ok");
-        }
-        const data = await response.json();
-        console.log("Fetched data:", data);
-        setUsers(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -42,12 +28,16 @@ export default function Registration() {
       .then((data) => {
         console.log(data);
         alert(`Wellcome ${fullname}! Successfull registration`)
+        setFormSubmitted(true)
       })
       .catch((error) => console.error("Error submitting registration", error));
   }
 
-  return (
-    <div className="login-container">
+  return formSubmitted ? (
+      <HomePage username={username}/>
+          ) :(
+      <div className="login-container">
+       
       <form id="msform" onSubmit={handleSubmit}>
         <ul id="progressbar">
           <li className="active">Account Setup</li>
@@ -96,10 +86,11 @@ export default function Registration() {
             onChange={(e) => setPassword(e.target.value)}
             name="password"
           />
-          <button type="submit">Submit your registration</button>
+          <button type="submit" >Submit your registration</button>
         </fieldset>
       </form>
-      <div></div>
     </div>
-  );
+  )
 }
+
+
