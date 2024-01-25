@@ -1,3 +1,40 @@
-POST http://localhost:4000/api/signup
+
+
+
 
 ###
+GET   http://localhost:3000/api/cats/all
+
+###
+GET   http://localhost:3000/api/cats/65b0e1c3dfa63c7a7806ae07
+###
+POST http://localhost:3000/api/cats
+Content-Type: application/json
+
+{
+   "name": "raasdfads",
+        "sex": "xsdfasdfasda",
+        "age": "111",
+        "location": "sadfasdasdqa12312",
+        "picture": "asdasasdfdqa12312",
+        "breed":"asdasdqaasdf12312",
+        "dollars": "122"
+}
+
+
+###
+PATCH http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b
+Content-Type: application/json
+
+{
+   "name": "changed",
+        "sex": "changed",
+        "age": "0",
+        "location": "sad",
+        "picture": "a12",
+        "breed":"asda2",
+        "dollars": "13322"
+}
+
+###
+DELETE  http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b
