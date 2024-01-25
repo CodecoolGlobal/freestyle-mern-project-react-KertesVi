@@ -38,8 +38,4 @@ export default function LandingPage() {
       <div className="section seventh cat"></div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0eb28ad33590fe8bafa212ea18db17e8ca28baa9

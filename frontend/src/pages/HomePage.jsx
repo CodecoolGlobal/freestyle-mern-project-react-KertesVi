@@ -1,8 +1,9 @@
 // import "./HomePage.scss";
 // import { useEffect, useState } from "react";
+import React from "react";
 
 export default function HomePage(props) {
-    const {fullname} = props;
+    const { fullname } = props;
   
   
       // useEffect(() => {

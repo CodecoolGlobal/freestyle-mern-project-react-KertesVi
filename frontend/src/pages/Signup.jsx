@@ -92,10 +92,4 @@ export default function Registration() {
       </form>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
-}
-
-
->>>>>>> 0eb28ad33590fe8bafa212ea18db17e8ca28baa9
