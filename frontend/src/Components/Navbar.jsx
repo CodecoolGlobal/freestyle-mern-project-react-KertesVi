@@ -12,8 +12,8 @@ export default function Navbar() {
       <Link to={"/adoptedcats"}>
         <button>Cats with new home</button>
       </Link>
-      <Link to={"/login"}>
-        <button>Login</button>
+      <Link to={"/signup"}>
+        <button>SignUp</button>
       </Link>
     </nav>
   );
