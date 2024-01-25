@@ -10,7 +10,7 @@ import AboutUs from "./Components/AboutUs.jsx";
 import AdoptedCats from "./pages/AdoptedCats.jsx";
 import Editor from "./pages/Editor.jsx";
 import Ourcats from "./pages/OurCats.jsx";
-import BreedModal from "./pages/BreedModal.jsx";
+import BreedModal from "./pages/Breed.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="ourcats" element={<Ourcats />}></Route>
         </Route>
         <Route path="editor" element={<Editor />}></Route>
-        <Route path="breed" element={<BreedModal/>}></Route>
+        <Route path="breeds/:id" element={<BreedModal/>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
