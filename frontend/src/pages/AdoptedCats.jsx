@@ -3,7 +3,7 @@ import "./AdoptedCats.css";
 export default function AdoptedCats() {
   return (
     <div className="body">
-      <div className="title">Successful Adoption Story of the Month</div>
+      <div className="title"><h1>Successful Adoption Story of the Month</h1></div>
       <div className="container">
         <div className="card">
           <img

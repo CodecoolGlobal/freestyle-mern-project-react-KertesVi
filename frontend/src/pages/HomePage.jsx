@@ -14,8 +14,9 @@ export default function HomePage(props) {
         </>
       ) : (
         <>
-          <h1>Wellcome</h1>
+          <h1>This will be the homepage.....</h1>
           <p>... under construction</p>
+          <img src="/images/cat.png" alt='What'/>
         </>
       )}
     </div>
