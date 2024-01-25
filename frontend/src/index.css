@@ -12,6 +12,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: max-content;
 }
 
 footer{
@@ -71,6 +72,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #ef1515;
+    background-color:  rgba(252, 108, 199, 0.75);
   }
 }
