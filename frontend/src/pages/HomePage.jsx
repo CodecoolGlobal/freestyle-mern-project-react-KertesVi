@@ -2,8 +2,8 @@
 // import { useEffect, useState } from "react";
 
 export default function HomePage(props) {
-  const {username} = props;
-  console.log(username)
+  const {fullname} = props;
+
 
     // useEffect(() => {
   //   const fetchData = async () => {
@@ -24,9 +24,9 @@ export default function HomePage(props) {
   return (
 
     <div className="HomePage">
-      {username ? (
+      {fullname ? (
         <>
-      <h1>Hello {username}</h1>
+      <h1>Hello {fullname}</h1>
       <button>Adopt a cat</button>
         <button>Donate for the shelter</button>
         <button>Our cats</button>

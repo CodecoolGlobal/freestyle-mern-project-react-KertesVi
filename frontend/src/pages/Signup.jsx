@@ -30,11 +30,12 @@ export default function Registration() {
         alert(`Wellcome ${fullname}! Successfull registration`)
         setFormSubmitted(true)
       })
-      .catch((error) => console.error("Error submitting registration", error));
+      .catch((error) => console.error("Error submitting registration", error))
   }
+  
 
   return formSubmitted ? (
-      <HomePage username={username}/>
+      <HomePage fullname={fullname}/>
           ) :(
       <div className="login-container">
        
@@ -84,7 +85,7 @@ export default function Registration() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            name="password"
+       
           />
           <button type="submit" >Submit your registration</button>
         </fieldset>
