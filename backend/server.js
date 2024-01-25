@@ -10,7 +10,7 @@ app.use(express.json());
 
 try {
   await mongoose.connect(
-    "mongodb+srv://IrenMost:MGdb24@cluster0.x9mztr9.mongodb.net/test"
+    "mongodb+srv://IrenMost:MGdb24@cluster0.x9mztr9.mongodb.net/CatMern"
   )
   console.log("MongoDB connected")
   app.listen(PORT, () => {

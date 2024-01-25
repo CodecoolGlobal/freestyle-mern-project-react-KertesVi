@@ -4,7 +4,7 @@
       "sex": "male",
       "age": "1",
       "location": "London",
-      "picture": "cat.jpg",
+      "picture": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
       "breed": "Abyssinian",
       "dollars": "2"
     },
@@ -13,7 +13,7 @@
       "sex": "female",
       "age": "2",
       "location": "London",
-      "picture": "cat2.jpg",
+      "picture": "https://cats.com/wp-content/uploads/2021/12/bengal-cat.jpg",
       "breed": "Bengal",
       "dollars": "3"
     },
@@ -22,7 +22,7 @@
       "sex": "female",
       "age": "3",
       "location": "Manchester",
-      "picture": "cat3.jpg",
+      "picture": "https://cdn2.thecatapi.com/images/ai6Jps4sx.jpg",
       "breed": "Siamese",
       "dollars": "4"
     },
@@ -31,7 +31,7 @@
       "sex": "male",
       "age": "2",
       "location": "Manchester",
-      "picture": "cat4.jpg",
+      "picture": "https://cdn2.thecatapi.com/images/OOD3VXAQn.jpg",
       "breed": "Maine Coon",
       "dollars": "5"
     },
@@ -40,7 +40,7 @@
       "sex": "female",
       "age": "1",
       "location": "Birmingham",
-      "picture": "cat5.jpg",
+      "picture": "https://cdn2.thecatapi.com/images/o9t0LDcsa.jpg",
       "breed": "Scottish Fold",
       "dollars": "4"
     },
@@ -49,7 +49,7 @@
       "sex": "male",
       "age": "4",
       "location": "Birmingham",
-      "picture": "cat6.jpg",
+      "picture": "https://cdn2.thecatapi.com/images/oGefY4YoG.jpg",
       "breed": "Ragdoll",
       "dollars": "3"
     },
@@ -58,7 +58,7 @@
       "sex": "female",
       "age": "2",
       "location": "London",
-      "picture": "cat7.jpg",
+      "picture": "https://cdn2.thecatapi.com/images/-Zfz5z2jK.jpg",
       "breed": "Persian",
       "dollars": "6"
     },
