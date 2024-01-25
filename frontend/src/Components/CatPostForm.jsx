@@ -13,16 +13,21 @@ function CatPostForm(props) {
 
 
     function handlePost() {
-        const data = {name,age,sex,location,picture,breed,dollars};
+        const data = { name, age, sex, location, picture, breed, dollars };
         fetch('api/cats', {
             method: 'POST',
             headers: {
                 'Content-type': 'application'
             },
-            body: JSON.stringify(data);
-        })
-    
-        finish()
+            body: JSON.stringify(data)
+        }).then(response => response.json())
+            .then(response => {
+                console.log(response);
+            })
+            .then(finish())
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     return (
