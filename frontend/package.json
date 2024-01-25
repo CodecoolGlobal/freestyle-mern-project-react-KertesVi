@@ -1,13 +1,4 @@
 {
-  "server": {
-    "proxy": {
-      "/api": {
-        "target": "http://localhost:4000",
-        "changeOrigin": true,
-        "secure": false
-      }
-    }
-  },
   "name": "latest",
   "private": true,
   "version": "0.0.0",

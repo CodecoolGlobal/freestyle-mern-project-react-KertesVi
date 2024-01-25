@@ -15,9 +15,9 @@ app.use(express.json());
 const PORT = 4000;
 
 app.post("/api/signup", (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, phone, address, fullname } = req.body;
 
-  if (!username || !email || !password) {
+  if (!username || !email || !password || !phone || !address || !fullname) {
     return res.status(400).json({ success: false, message: "Invalid input" });
   }
 
@@ -44,6 +44,9 @@ app.post("/api/signup", (req, res) => {
         username,
         email,
         password,
+        fullname,
+        address,
+        phone,
         createdAt: Date.now(),
       });
 
