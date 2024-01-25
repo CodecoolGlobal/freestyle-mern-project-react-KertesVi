@@ -1,8 +1,10 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function OurCats(){
     const [catData, setCatData] = useState(null);
+
+    useEffect(() => {
     const fetchData = async () => {
         try {
           const response = await fetch("/api/cats");
@@ -14,7 +16,7 @@ export default function OurCats(){
           console.log("Error fetching data", error);
         }
       };
-      fetchData();
+      fetchData();}, [])
     return (
         <div>
             

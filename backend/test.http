@@ -11,15 +11,17 @@ GET   http://localhost:3000/api/cats/65b0e1c3dfa63c7a7806ae07
 POST http://localhost:3000/api/cats
 Content-Type: application/json
 
-{
-   "name": "raasdfads",
-        "sex": "xsdfasdfasda",
-        "age": "111",
-        "location": "sadfasdasdqa12312",
-        "picture": "asdasasdfdqa12312",
-        "breed":"asdasdqaasdf12312",
-        "dollars": "122"
-}
+
+   {
+      "name": "Snowball",
+      "sex": "male",
+      "age": "1",
+      "location": "London",
+      "picture": "cat.jpg",
+      "breed": "Abyssinian",
+      "dollars": "2"
+    }
+
 
 
 ###
