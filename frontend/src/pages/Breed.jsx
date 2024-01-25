@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function BreedModal() {
   const [catBreedData, setCatBreedData] = useState(null);
-  const [id, setId] = useState(null);
+  const [id, setId] = useState("");
   const [selectedBreedImage, setSelectedBreedImage] = useState(null);
   const [selectedBreedDetail, setSelectedBreedDetail] = useState(null);
   const breedType = useParams().id;
@@ -15,15 +15,7 @@ export default function BreedModal() {
   // const LinkToBreeds = `https://www.vetstreet.com/cats/abyssinian`
   // const linkToBreedImage = `https://api.thecatapi.com/v1/images/search?limit=11&api_key=live_qHVIRoMIeLIhQM4UQcxYiZFMd0IAFH9sm9k8MaI6x0urTABY8EvbgHLzGiYZqZNpbreed_ids=abys`
 
-  function convertNameToId(name, allBreeds) {
-    for (let breed of allBreeds) {
-      if (breed.name.toLowerCase() == name.toLowerCase()) { // Abyssinian
-        console.log(breed.id);    // abys
-                       
-       
-      }
-    }
-  }
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -34,7 +26,8 @@ export default function BreedModal() {
         setCatBreedData(dataJson);
         console.log(dataJson);
         console.log(breedType)
-        convertNameToId("breedType", dataJson); 
+     
+      
  
       
       } catch (error) {
@@ -43,9 +36,16 @@ export default function BreedModal() {
     };
    
     fetchData();
-  }, [id]);
-
-  
+  }, [breedType]);
+  async function convertNameToId(name, allBreeds) {
+    for (let breed of allBreeds) {
+      if (breed.name.toLowerCase() == name.toLowerCase()) { // Abyssinian
+        setId(breed.id);  
+        console.log(id)  // abys
+      }
+    }
+  }
+  convertNameToId("breedType", catBreedData);
   useEffect(() => {
     const fetchBreedImage = async () => {
       try {

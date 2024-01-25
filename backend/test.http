@@ -3,12 +3,12 @@
 
 
 ###
-GET   http://localhost:3000/api/cats/all
+GET   http://localhost:4000/api/cats/all
 
 ###
-GET   http://localhost:3000/api/cats/65b0e1c3dfa63c7a7806ae07
+GET   http://localhost:4000/api/cats/65b0e1c3dfa63c7a7806ae07
 ###
-POST http://localhost:3000/api/cats
+POST http://localhost:4000/api/cats
 Content-Type: application/json
 
 
@@ -17,13 +17,12 @@ Content-Type: application/json
       "sex": "female",
       "age": "2",
       "location": "London",
-      "picture": "cat7.jpg",
+      "picture": "https://cdn2.thecatapi.com/images/-Zfz5z2jK.jpg",
       "breed": "Persian",
       "dollars": "6"
     }
-
 ###
-PATCH http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b
+PATCH http://localhost:4000/api/cats/65b0e264dfa63c7a7806ae0b
 Content-Type: application/json
 
 {
@@ -37,4 +36,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b
+DELETE  http://localhost:4000/api/cats/65b0e264dfa63c7a7806ae0b
