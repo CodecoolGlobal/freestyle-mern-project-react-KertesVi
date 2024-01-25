@@ -13,7 +13,7 @@ function CatUpdaterForm(props) {
 
     function handlePatch() {
         const data = { name, age, sex, location, picture, breed, dollars };
-        fetch(`/api/todo/${id}`, {
+        fetch(`/api/cats/${cat._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
