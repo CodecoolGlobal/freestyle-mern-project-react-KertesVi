@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import BreedModal from "../Components/BreedModal";
@@ -31,12 +32,12 @@ const breed = (event.target.value);
 console.log(breed);
   }
 
-
   return (
     <div>
       <div className="catlist">
         {catData &&
           catData.map((cat) => (
+
             <div className="container" key={cat._id}>
              
                   <h4>Name: {cat.name} </h4>
@@ -54,6 +55,7 @@ console.log(breed);
       </div>
     </div>
 
+
     //   /<div class="card">
     //   <img src="img_avatar.png" alt="Avatar" style="width:100%">
     //   <div class="container">
@@ -61,5 +63,7 @@ console.log(breed);
     //     <p>Architect & Engineer</p>
     //   </div>
     // </div>
+
+
   );
 }
