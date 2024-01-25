@@ -3,27 +3,26 @@
 
 
 ###
-GET   http://localhost:4000/api/cats/all
+GET   http://localhost:3000/api/cats/all
 
 ###
-GET   http://localhost:4000/api/cats/65b0e1c3dfa63c7a7806ae07
+GET   http://localhost:3000/api/cats/65b0e1c3dfa63c7a7806ae07
 ###
 POST http://localhost:4000/api/cats
 Content-Type: application/json
 
 
     {
-      "name": "Whiskers",
-      "sex": "female",
-      "age": "2",
-      "location": "London",
-      "picture": "cat2.jpg",
-      "breed": "Bengal",
-      "dollars": "3"
-    }
-
+    "name": "Max",
+    "sex": "male",
+    "age": "1",
+    "location": "Birmingham",
+    "picture": "cat8.jpg",
+    "breed": "British Shorthair",
+    "dollars": "3"
+  }
 ###
-PATCH http://localhost:4000/api/cats/65b0e264dfa63c7a7806ae0b
+PATCH http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b
 Content-Type: application/json
 
 {
@@ -37,4 +36,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:4000/api/cats/65b0e264dfa63c7a7806ae0b
+DELETE  http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b

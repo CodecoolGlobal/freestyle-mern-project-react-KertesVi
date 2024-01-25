@@ -16,6 +16,13 @@ export default function Navbar() {
       <Link to={"/signup"}>
         <button>SignUp</button>
       </Link>
+      <Link to={"/ourcats"}>
+        <button>Adoptable cats</button>
+      </Link>
+      <Link to={"/editor"}>
+        <button>Editor site</button>
+      </Link>
+  
     </nav>
   );
 }

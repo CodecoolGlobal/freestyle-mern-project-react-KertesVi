@@ -23,10 +23,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path='signup' element={<Signup/>}></Route>
           <Route path="adoptedcats" element={<AdoptedCats />}></Route>
           <Route path="ourcats" element={<Ourcats />}></Route>
-      
-        </Route>
-        <Route path="editor" element={<Editor />}></Route>
+          <Route path="editor" element={<Editor />}></Route>
         <Route path="ourcats/:id" element={<BreedModal/>}></Route>
+        </Route>
+    
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
