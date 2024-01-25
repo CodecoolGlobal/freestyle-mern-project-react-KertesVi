@@ -15,13 +15,6 @@
   width: max-content;
 }
 
-footer{
-  color: rgba(30, 71, 133, 0.87);
-  align-items: center;
-  text-align: center;
-  border-bottom: 0;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -37,11 +30,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -72,6 +60,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color:  rgba(252, 108, 199, 0.75);
+    background-color: rgba(252, 108, 199, 0.75);
   }
 }
