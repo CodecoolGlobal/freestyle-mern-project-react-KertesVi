@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import BreedModal from "../Components/BreedModal";
 
 export default function OurCats() {
@@ -40,12 +40,15 @@ console.log(breed);
             <div className="container" key={cat._id}>
              
                   <h4>Name: {cat.name} </h4>
-                <img src={cat.image} alt={cat.name}></img>
+                <img src={cat.picture} alt={cat.name} width="30%"></img>
                 <p>{cat.sex}</p>
                 <p>Age: {cat.age}</p>
                 <p>Location: {cat.location}</p>
                 <p>Supported by {cat.dollars}$</p>
-                <p>Breed: {cat.breed}</p><button value={cat.breed} onClick={showModal}>Learn more about {cat.breed}</button>
+                <p>Breed: {cat.breed}</p>
+                <Link to={cat.breed}>
+                <button value={cat.breed} >Learn more about {cat.breed}</button>
+                </Link>
             </div>
           ))}
       </div>

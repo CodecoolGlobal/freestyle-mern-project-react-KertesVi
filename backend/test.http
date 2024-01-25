@@ -13,16 +13,14 @@ Content-Type: application/json
 
 
    {
-      "name": "Snowball",
-      "sex": "male",
-      "age": "1",
+      "name": "Bella",
+      "sex": "female",
+      "age": "2",
       "location": "London",
-      "picture": "cat.jpg",
-      "breed": "Abyssinian",
-      "dollars": "2"
+      "picture": "cat7.jpg",
+      "breed": "Persian",
+      "dollars": "6"
     }
-
-
 
 ###
 PATCH http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b
