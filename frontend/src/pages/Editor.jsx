@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import CatPostForm from "../Components/CatPostForm";
 
 export default function Editor() {
   const [catData, setCatData] = useState(null);
+  const [catAdder, setCatAdder] = useState(null);
 
   function fetchData(){
     fetch('/api/cats/all')
@@ -22,10 +24,18 @@ export default function Editor() {
     .catch(error => console.log(error));
     fetchData();
   }
-
+  function handleAddNewCat(){
+    setCatAdder(true);
+  }
+  function handleFinishNewCatSet(){
+    setCatAdder(false);
+  }
 
   fetchData();
   return (
+    catAdder ?(
+      <CatPostForm handleFinish={handleFinishNewCatSet}/>
+    ) : ( 
     <div>
        <button onClick={handleAddNewCat}>add new cat</button>
       <div className="catlist">
@@ -45,10 +55,5 @@ export default function Editor() {
         ))}
       </div>
     </div>
-
-
-
-
-
-  )
+  ))
 }
