@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import CatPostForm from "../Components/CatPostForm";
 import CatUpdaterForm from "../Components/CatUpdaterForm"
 
-export default function Editor() {
+function Editor() {
   const [catData, setCatData] = useState(null);
   const [catAdder, setCatAdder] = useState(null);
   const [catUpdater, setCatUpdater] = useState(null)
 
   function fetchData() {
-    fetch('/api/cats/all')
+    fetch('/api/cats')
       .then(response => response.json())
       .then(data => setCatData(data))
       .catch(error => console.log(error));
@@ -41,7 +41,7 @@ export default function Editor() {
     fetchData();
   }
 
-  fetchData();
+  //replace with useeffect
   return (
     catAdder ? (
       <CatPostForm handleFinish={handleFinishNewCatSet} />
@@ -69,3 +69,4 @@ export default function Editor() {
       </div>
     ))
 }
+export default Editor;

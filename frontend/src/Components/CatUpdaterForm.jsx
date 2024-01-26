@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 function CatUpdaterForm(props) {
-    const { name, setName } = useState(null)
-    const { age, setAge } = useState(null)
-    const { sex, setSex } = useState(null)
-    const { location, setLocation } = useState(null)
-    const { picture, setPicture } = useState(null)
-    const { breed, setBreed } = useState(null)
-    const { dollars, setDollars } = useState(null)
+    const [ name, setName ] = useState(null)
+    const [ age, setAge ] = useState(null)
+    const [ sex, setSex ] = useState(null)
+    const [ location, setLocation ] = useState(null)
+    const [ picture, setPicture ] = useState(null)
+    const [ breed, setBreed ] = useState(null)
+    const [ dollars, setDollars ] = useState(null)
 
     const cat = props.cat;
     const update = props.handleUpdate;
@@ -32,7 +32,7 @@ function CatUpdaterForm(props) {
     }
 
     return (
-        <Form onSubmit={handlePatch}>
+        <form onSubmit={handlePatch}>
             <label>name:
                 <input placeholder={cat.name} type="text" value={name} onChange={e => setName(e.target.value)} />
             </label>
@@ -46,7 +46,7 @@ function CatUpdaterForm(props) {
                 <input placeholder={cat.location} type="text" value={location} onChange={e => setLocation(e.target.value)} />
             </label>
             <label>Picture:
-                <input placeholder={cat.picture} type="url" value={picture} onChange={e => setPicture(e.target.value)} />
+                <input placeholder={cat.picture} type="text" value={picture} onChange={e => setPicture(e.target.value)} />
             </label>
             <label>Breed:
                 <input placeholder={cat.breed} type="text" value={breed} onChange={e => setBreed(e.target.value)} />
@@ -55,7 +55,7 @@ function CatUpdaterForm(props) {
                 <input placeholder={cat.dollars} type="number" value={dollars} onChange={e => setDollars(e.target.value)} />
             </label>
             <button type="submit">Submit changes</button>
-        </Form>
+        </form>
     )
 }
 export default CatUpdaterForm

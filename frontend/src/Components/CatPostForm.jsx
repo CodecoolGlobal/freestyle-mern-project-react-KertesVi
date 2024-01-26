@@ -3,24 +3,28 @@ import React, { useState } from "react"
 function CatPostForm(props) {
     const finish = props.handleFinish
 
-    const { name, setName } = useState(null)
-    const { age, setAge } = useState(null)
-    const { sex, setSex } = useState(null)
-    const { location, setLocation } = useState(null)
-    const { picture, setPicture } = useState(null)
-    const { breed, setBreed } = useState(null)
-    const { dollars, setDollars } = useState(null)
+    const [ name, setName ] = useState()
+    const [ sex, setSex ] = useState()
+    const [ age, setAge ] = useState()
+    const [ location, setLocation ] = useState()
+    const [ picture, setPicture ] = useState()
+    const [ breed, setBreed ] = useState()
+    const [ dollars, setDollars ] = useState()
 
 
-    function handlePost() {
-        const data = { name, age, sex, location, picture, breed, dollars };
-        fetch('api/cats', {
+    function handlePost(e) {
+        e.preventDefault();
+        
+        const data = { name, sex, age, location, picture, breed, dollars };
+        console.log(data)
+        fetch('/api/cats', {
             method: 'POST',
             headers: {
                 'Content-type': 'application'
             },
             body: JSON.stringify(data)
-        }).then(response => response.json())
+        })
+        .then(response => response.json())
             .then(response => {
                 console.log(response);
             })
@@ -31,7 +35,7 @@ function CatPostForm(props) {
     }
 
     return (
-        <Form onSubmit={handlePost}>
+        <form onSubmit={handlePost}>
             <label>name:
                 <input type="text" value={name} onChange={e => setName(e.target.value)} />
             </label>
@@ -45,7 +49,7 @@ function CatPostForm(props) {
                 <input type="text" value={location} onChange={e => setLocation(e.target.value)} />
             </label>
             <label>Picture:
-                <input type="url" value={picture} onChange={e => setPicture(e.target.value)} />
+                <input type="text" value={picture} onChange={e => setPicture(e.target.value)} />
             </label>
             <label>Breed:
                 <input type="text" value={breed} onChange={e => setBreed(e.target.value)} />
@@ -53,7 +57,8 @@ function CatPostForm(props) {
             <label>Money:
                 <input type="number" value={dollars} onChange={e => setDollars(e.target.value)} />
             </label>
-        </Form>
+            <button type="submit">Submit new cat</button>
+        </form>
     )
 }
 export default CatPostForm
