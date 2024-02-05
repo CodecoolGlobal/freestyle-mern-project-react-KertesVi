@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./navbar.css";
 
 export default function Navbar() {
+
   return (
     <nav className="Navbar">
       <Link to={"/home"}>
@@ -21,6 +22,9 @@ export default function Navbar() {
       </Link>
       <Link to={"/editor"}>
         <button>Editor site</button>
+      </Link>
+      <Link to={"/login"}>
+        <button>Login</button>
       </Link>
   
     </nav>
