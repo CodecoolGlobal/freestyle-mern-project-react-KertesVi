@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 
-function CatPostForm(props) {
-    const finish = props.handleFinish
+function CatPostForm({handleFinish}) {
 
     const [ name, setName ] = useState()
     const [ sex, setSex ] = useState()
@@ -15,20 +14,17 @@ function CatPostForm(props) {
     function handlePost(e) {
         e.preventDefault();
         
-        const data = { name, sex, age, location, picture, breed, dollars };
-        console.log(data)
+        const data = { name: name, sex: sex, age: age, location: location, picture: picture, breed: breed, dollars: dollars };
+        console.log(JSON.stringify(data))
         fetch('/api/cats', {
             method: 'POST',
             headers: {
-                'Content-type': 'application'
+                'Content-type': 'application/json'
             },
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-            .then(response => {
-                console.log(response);
-            })
-            .then(finish())
+            .then(handleFinish())
             .catch(error => {
                 console.log(error);
             });
@@ -59,6 +55,7 @@ function CatPostForm(props) {
             </label>
             <button type="submit">Submit new cat</button>
         </form>
-    )
+    );
 }
+
 export default CatPostForm
