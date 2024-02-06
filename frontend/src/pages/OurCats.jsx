@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import BreedModal from "../Components/BreedModal";
+
 
 export default function OurCats() {
   const [catData, setCatData] = useState(null);
@@ -23,14 +23,7 @@ export default function OurCats() {
   }, []);
 
 
-  function showModal(event) {
-  //   setVisible(!visible)
-  //   return<BreedModal/>
-  // <Link to={"/breed"}/>
-console.log("breed is clicked");
-const breed = (event.target.value);
-console.log(breed);
-  }
+
 
   return (
     <div>
