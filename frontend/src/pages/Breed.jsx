@@ -84,7 +84,7 @@ export default function BreedModal() {
     fetchData();
     fetchBreedImage();
     fetchBreedDetails();
-    setLoading(false)
+    if (id !== null) {setLoading(false)}
   }, []);
 
   
