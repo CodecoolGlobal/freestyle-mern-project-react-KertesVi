@@ -22,8 +22,9 @@ const CatTable = ({cats, onDelete,onUpdate}) => (
             <td>{cat.sex}</td>
             <td>{cat.age}</td>
             <td>{cat.location}</td>
+            <td><img src={cat.picture} width="100px"/></td>
             <td>{cat.breed}</td>
-            <td>{cat.money}</td>
+            <td>{cat.dollars}$</td>
 
             <td>
               <button type="button" onClick={() => onDelete(cat._id)}>
