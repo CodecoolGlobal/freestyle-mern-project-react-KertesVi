@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Snowball",
+    "sex": "male",
+    "age": "1",
+    "location": "London",
+    "picture": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg",
+    "breed": "Abyssinian",
+    "dollars": "2"
+  },
+  {
+    "name": "Whiskers",
+    "sex": "female",
+    "age": "2",
+    "location": "London",
+    "picture": "https://cats.com/wp-content/uploads/2021/12/bengal-cat.jpg",
+    "breed": "Bengal",
+    "dollars": "3"
+  },
+  {
+    "name": "Mittens",
+    "sex": "female",
+    "age": "3",
+    "location": "Manchester",
+    "picture": "https://cdn2.thecatapi.com/images/ai6Jps4sx.jpg",
+    "breed": "Siamese",
+    "dollars": "4"
+  },
+  {
+    "name": "Simba",
+    "sex": "male",
+    "age": "2",
+    "location": "Manchester",
+    "picture": "https://cdn2.thecatapi.com/images/OOD3VXAQn.jpg",
+    "breed": "Maine Coon",
+    "dollars": "5"
+  },
+  {
+    "name": "Luna",
+    "sex": "female",
+    "age": "1",
+    "location": "Birmingham",
+    "picture": "https://cdn2.thecatapi.com/images/o9t0LDcsa.jpg",
+    "breed": "Scottish Fold",
+    "dollars": "4"
+  },
+  {
+    "name": "Oliver",
+    "sex": "male",
+    "age": "4",
+    "location": "Birmingham",
+    "picture": "https://cdn2.thecatapi.com/images/oGefY4YoG.jpg",
+    "breed": "Ragdoll",
+    "dollars": "3"
+  },
+  {
+    "name": "Bella",
+    "sex": "female",
+    "age": "2",
+    "location": "London",
+    "picture": "https://cdn2.thecatapi.com/images/-Zfz5z2jK.jpg",
+    "breed": "Persian",
+    "dollars": "6"
+  },
+  {
+    "name": "Max",
+    "sex": "male",
+    "age": "1",
+    "location": "Birmingham",
+    "picture": "cat8.jpg",
+    "breed": "British Shorthair",
+    "dollars": "3"
+  },
+  {
+    "name": "Chloe",
+    "sex": "female",
+    "age": "3",
+    "location": "London",
+    "picture": "cat9.jpg",
+    "breed": "Sphynx",
+    "dollars": "5"
+  },
+  {
+    "name": "Milo",
+    "sex": "male",
+    "age": "2",
+    "location": "London",
+    "picture": "cat10.jpg",
+    "breed": "Devon Rex",
+    "dollars": "4"
+  },
+  {
+    "name": "Luna",
+    "sex": "female",
+    "age": "1",
+    "location": "London",
+    "picture": "cat11.jpg",
+    "breed": "Bengal",
+    "dollars": "5"
+  },
+  {
+    "name": "Oscar",
+    "sex": "male",
+    "age": "3",
+    "location": "London",
+    "picture": "cat12.jpg",
+    "breed": "Scottish Fold",
+    "dollars": "4"
+  },
+  {
+    "name": "Lily",
+    "sex": "female",
+    "age": "2",
+    "location": "London",
+    "picture": "cat13.jpg",
+    "breed": "Maine Coon",
+    "dollars": "6"
+  },
+  {
+    "name": "Charlie",
+    "sex": "male",
+    "age": "1",
+    "location": "London",
+    "picture": "cat14.jpg",
+    "breed": "Siamese",
+    "dollars": "3"
+  },
+  {
+    "name": "Sophie",
+    "sex": "female",
+    "age": "2",
+    "location": "London",
+    "picture": "cat15.jpg",
+    "breed": "Ragdoll",
+    "dollars": "5"
+  }
+]

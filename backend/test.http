@@ -8,20 +8,19 @@ GET   http://localhost:3000/api/cats
 ###
 GET   http://localhost:3000/api/cats/65b0e1c3dfa63c7a7806ae07
 ###
-POST http://localhost:3000/api/cats
+POST http://localhost:4000/api/cats
 Content-Type: application/json
 
-{
-   "name": "raasdfads",
-        "sex": "xsdfasdfasda",
-        "age": "111",
-        "location": "sadfasdasdqa12312",
-        "picture": "asdasasdfdqa12312",
-        "breed":"asdasdqaasdf12312",
-        "dollars": "122"
-}
 
-
+    {
+    "name": "Max",
+    "sex": "male",
+    "age": "1",
+    "location": "Birmingham",
+    "picture": "cat8.jpg",
+    "breed": "British Shorthair",
+    "dollars": "3"
+  }
 ###
 PATCH http://localhost:3000/api/cats/65b0e264dfa63c7a7806ae0b
 Content-Type: application/json
