@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import  "./Breed.css";
 
 
 export default function BreedModal() {
@@ -25,6 +26,41 @@ export default function BreedModal() {
       }
     }
   }
+
+  const fetchBreedImage = async () => {
+    try {
+      console.log(id);
+      const response = await fetch(` https://api.thecatapi.com/v1/images/search?limit=11&api_key=live_qHVIRoMIeLIhQM4UQcxYiZFMd0IAFH9sm9k8MaI6x0urTABY8EvbgHLzGiYZqZNpbreed_ids=${id}`, {
+        headers: { "x-api-key": api_key },
+      });
+      const dataJson = await response.json();
+      setSelectedBreedImage(dataJson);
+ 
+
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  console.log(id);
+
+
+
+  
+
+  const fetchBreedDetails = async () => {
+    try {
+      const response = await fetch(` https://api.thecatapi.com/v1/breeds/${id}`, {
+        headers: { "x-api-key": api_key },
+      });
+      const dataJson = await response.json();
+      setSelectedBreedDetail(dataJson);
+     
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  console.log(id);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,51 +78,22 @@ export default function BreedModal() {
     };
     console.log(id);
     fetchData();
-  }, [id]);
+    fetchBreedImage();
+    fetchBreedDetails();
+
+  }, []);
 
   
-  useEffect(() => {
-    const fetchBreedImage = async () => {
-      try {
-        console.log(id);
-        const response = await fetch(` https://api.thecatapi.com/v1/images/search?limit=11&api_key=live_qHVIRoMIeLIhQM4UQcxYiZFMd0IAFH9sm9k8MaI6x0urTABY8EvbgHLzGiYZqZNpbreed_ids=${id}`, {
-          headers: { "x-api-key": api_key },
-        });
-        const dataJson = await response.json();
-        setSelectedBreedImage(dataJson);
 
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    console.log(id);
-    fetchBreedImage();
-  }, [id]);
-
-    
-  // useEffect(() => {
-  //   const fetchBreedDetails = async () => {
-  //     try {
-  //       const response = await fetch(` https://api.thecatapi.com/v1/breeds/${id}`, {
-  //         headers: { "x-api-key": api_key },
-  //       });
-  //       const dataJson = await response.json();
-  //       setSelectedBreedDetail(dataJson);
-       
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-  //   console.log(id);
-  //   fetchBreedDetails();
-  // }, [id]);
+   
+  
 
   return (
     <div  className="selectedBreed">
-      <div className="container">
+      <div className="catcontainer">
         
-        <p>{catBreedData && catBreedData[0].name}</p>
-        <p>{catBreedData && catBreedData[0].description}</p>
+        <p>{selectedBreedDetail  && selectedBreedDetail.name}</p>
+        <p>{selectedBreedDetail  && selectedBreedDetail.description}</p> 
         {/* <p>{selectedBreedImage && selectedBreedImage[0].url}</p> */}
         <img src={selectedBreedImage && selectedBreedImage[0].url} width="300px"></img>
         {/* <p>{selectedBreedDetail  && selectedBreedDetail.child_friendly}</p> */}
