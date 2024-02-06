@@ -86,11 +86,11 @@ app.get("/api/cats/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.get("/api/login", (req, res) => {
+app.post("/api/login", (req, res) => {
   const { username,  password} = req.body;
   User
     .find({ username: username, password: password })
-    .then((user) => res.json(user))
+    .then((user) => res.json(...user, ))
     .catch((err) => console.log(err));
 });
 

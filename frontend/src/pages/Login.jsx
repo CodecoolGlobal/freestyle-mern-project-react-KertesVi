@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import HomePage from "./HomePage.jsx";
 
-export default function Registration() {
+export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [data, setData] = useState({});
+  const [userData, setUserData] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,25 +16,37 @@ export default function Registration() {
     const requestData = { username, password };
 
     fetch("/api/login", {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(requestData),
     })
-      .then((res) => res.json())
-      .then((responseData) => {
-        // Assuming the API returns a user object upon successful login
-        setFormSubmitted(true);
-        setData(responseData.user); 
-        // Adjust accordingly based on your API response
-      })
-      .catch((error) => {
-        console.error("Error submitting login", error);
-      });
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Failed to login");
+      }
+      return res.json();
+    })
+    .then((responseData) => {
+      setFormSubmitted(true);
+      setUserData(responseData.user);
+      setError(null);
+    })
+    .catch((error) => {
+      console.error("Error submitting login", error);
+      setError("Failed to login");
+    });
   };
-  console.log(data)
+
   return (
+    formSubmitted ? <HomePage 
+      username={userData.username}
+      email={userData.email}
+      phone={userData.phone}
+      address={userData.address}
+      fullname={userData.fullname}
+    /> : 
     <>
       <div className="login-container">
         <form id="msform" onSubmit={handleSubmit}>
