@@ -4,9 +4,12 @@ import "./navbar.css";
 export default function Navbar({ username }) {
   return (
     <nav className="Navbar">
-      <Link to={"/home"}>
+      {username ?  <Link to={"/home"}>
+        <button>Wellcome {username}</button>
+      </Link> :    <Link to={"/home"}>
         <button>Home</button>
-      </Link>
+      </Link> }
+   
       <Link to={"/aboutus"}>
         <button>AboutUs</button>
       </Link>

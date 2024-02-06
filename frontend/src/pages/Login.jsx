@@ -1,6 +1,6 @@
 
 // import "./Login.scss";
-import React, { createContext, useState, useContext } from "react";
+import {  useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import HomePage from "./HomePage.jsx";
 import { DataContext } from "../Components/Layout.jsx";
@@ -71,7 +71,7 @@ export default function Login() {
             />
             <button type="submit" >Login</button>
             <Link to={"/signup"}>
-              <button type="submit">Signup</button>
+              <button>Signup</button>
             </Link>
           </fieldset>
         </form>

@@ -33,7 +33,7 @@ export default function Registration() {
         alert(`Wellcome ${fullname}! Successfull registration`)
         setFormSubmitted(true)
         setData(data)
-        setGlobalData(username);
+        setGlobalData(fullname);
       })
       .catch((error) => console.error("Error submitting registration", error))
   }
@@ -91,7 +91,7 @@ export default function Registration() {
        
           />
           <button type="submit" >Submit your registration</button>
-          <Link to={'/login'}><button type="submit" >Login</button></Link>
+          <Link to={'/login'}><button >Login</button></Link>
         </fieldset>
       </form>
     </div>
