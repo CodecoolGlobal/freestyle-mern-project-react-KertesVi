@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+
 // import "./Login.scss";
-import { useState } from "react";
+import React, { createContext, useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import HomePage from "./HomePage.jsx";
+import { DataContext } from "../Components/Layout.jsx";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -9,7 +11,7 @@ export default function Login() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
-
+  const { globalData, setGlobalData } = useContext(DataContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,31 +25,33 @@ export default function Login() {
       },
       body: JSON.stringify(requestData),
     })
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error("Failed to login");
-      }
-      return res.json();
-    })
-    .then((responseData) => {
-      setFormSubmitted(true);
-      setUserData(responseData);
-      setError(null);
-    })
-    .catch((error) => {
-      console.error("Error submitting login", error);
-      setError("Failed to login");
-    });
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to login");
+        }
+        return res.json();
+      })
+      .then((responseData) => {
+        setFormSubmitted(true);
+        setUserData(responseData);
+        setGlobalData(username);
+        setError(null);
+      })
+      .catch((error) => {
+        console.error("Error submitting login", error);
+        setError("Failed to login");
+      });
   };
 
-  return (
-    formSubmitted ? <HomePage 
+  return formSubmitted ? (
+    <HomePage
       username={username}
       email={userData.email}
       phone={userData.phone}
       address={userData.address}
       fullname={userData.fullname}
-    /> : 
+    />
+  ) : (
     <>
       <div className="login-container">
         <form id="msform" onSubmit={handleSubmit}>
@@ -65,7 +69,7 @@ export default function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit">Login</button>
+            <button type="submit" >Login</button>
             <Link to={"/signup"}>
               <button type="submit">Signup</button>
             </Link>

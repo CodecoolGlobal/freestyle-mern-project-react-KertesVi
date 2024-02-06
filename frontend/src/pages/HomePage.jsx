@@ -1,7 +1,5 @@
 import "./HomePage.scss";
 // // import { useEffect, useState } from "react";
-import React from "react";
-import AdoptedCats from "./AdoptedCats";
 import OurCats from "./OurCats";
 import { Link } from "react-router-dom";
 
@@ -11,7 +9,8 @@ export default function HomePage({
   phone,
   address,
   fullname,
-}) {
+ }) {
+
   return (
     <div className="HomePage">
       {username ? (

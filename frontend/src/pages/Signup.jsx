@@ -1,8 +1,8 @@
 import {Link} from "react-router-dom"
 import "./Signup.scss";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import HomePage from "./HomePage.jsx";
-
+import { DataContext } from "../Components/Layout.jsx";
 
 
 export default function Registration() {
@@ -14,6 +14,7 @@ export default function Registration() {
   const [address, setAddress] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [data, setData] = useState({})
+  const { globalData, setGlobalData } = useContext(DataContext);
 
 
   function handleSubmit(e) {
@@ -32,6 +33,7 @@ export default function Registration() {
         alert(`Wellcome ${fullname}! Successfull registration`)
         setFormSubmitted(true)
         setData(data)
+        setGlobalData(username);
       })
       .catch((error) => console.error("Error submitting registration", error))
   }

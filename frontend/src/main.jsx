@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom/client";
 import LandingPage from "./pages/LandingPage.jsx";
 // import "./index.css";
@@ -13,11 +13,12 @@ import Ourcats from "./pages/OurCats.jsx";
 import BreedModal from "./pages/Breed.jsx";
 import Login from "./pages/Login.jsx";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout/>}>
           <Route index element={<LandingPage />}></Route>
           <Route path="home" element={<HomePage />}></Route>
           <Route path="aboutus" element={<AboutUs />}></Route>
