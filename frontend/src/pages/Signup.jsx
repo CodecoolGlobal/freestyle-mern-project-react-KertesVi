@@ -1,7 +1,8 @@
-
-import "./Signup.css";
+import {Link} from "react-router-dom"
+import "./Signup.scss";
 import { useState } from "react";
 import HomePage from "./HomePage.jsx";
+
 
 
 export default function Registration() {
@@ -12,6 +13,7 @@ export default function Registration() {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [data, setData] = useState({})
 
 
   function handleSubmit(e) {
@@ -29,20 +31,19 @@ export default function Registration() {
         console.log(data);
         alert(`Wellcome ${fullname}! Successfull registration`)
         setFormSubmitted(true)
+        setData(data)
       })
       .catch((error) => console.error("Error submitting registration", error))
   }
   
 
   return formSubmitted ? (
-      <HomePage fullname={fullname}/>
+      <HomePage username={username} email={email} phone={phone} address={address} fullname={fullname}/>
           ) :(
       <div className="login-container">
        
       <form id="msform" onSubmit={handleSubmit}>
-        <ul id="progressbar">
-          <li className="active">Account Setup</li>
-        </ul>
+     
 
         <fieldset>
           <h1 className="fs-title">Create your account</h1>
@@ -88,6 +89,7 @@ export default function Registration() {
        
           />
           <button type="submit" >Submit your registration</button>
+          <Link to={'/login'}><button type="submit" >Login</button></Link>
         </fieldset>
       </form>
     </div>

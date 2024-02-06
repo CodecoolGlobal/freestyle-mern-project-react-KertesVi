@@ -86,6 +86,14 @@ app.get("/api/cats/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.post("/api/login", (req, res) => {
+  const { username,  password} = req.body;
+  User
+    .find({ username: username, password: password })
+    .then((user) => res.json(...user, ))
+    .catch((err) => console.log(err));
+});
+
 app.post("/api/cats", (req, res) => {
   console.log(req.body);
   const newCat = new cat({

@@ -6,6 +6,13 @@
 GET   http://localhost:3000/api/cats
 
 ###
+
+POST    http://localhost:4000/api/login
+Content-Type: application/json
+
+{"username":"afgsd", "password":"mjnhvf"}
+
+###
 GET   http://localhost:3000/api/cats/65b0e1c3dfa63c7a7806ae07
 ###
 POST http://localhost:4000/api/cats
