@@ -17,7 +17,7 @@ export default function BreedModal() {
 
   function convertBreedNameToBreedID(name, catBreedData) {
     for (let breed of catBreedData) {
-      if (breed.name.toLowerCase() === name) { // Abyssinian
+      if (breed.name === name) { // Abyssinian
         console.log(breed.name)
         setId(breed.id);  
         console.log(breed.id)                    // abys
@@ -34,7 +34,8 @@ export default function BreedModal() {
         const dataJson = await response.json();
         setCatBreedData(dataJson);
 
-        convertBreedNameToBreedID("Abyssinian", dataJson); /// ide szeretném a click event.target.valuját vagy a breedId
+        setId(convertBreedNameToBreedID(breedID, dataJson));
+        // console.log(id) /// ide szeretném a click event.target.valuját vagy a breedId
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -47,6 +48,7 @@ export default function BreedModal() {
   useEffect(() => {
     const fetchBreedImage = async () => {
       try {
+        console.log(id);
         const response = await fetch(` https://api.thecatapi.com/v1/images/search?limit=11&api_key=live_qHVIRoMIeLIhQM4UQcxYiZFMd0IAFH9sm9k8MaI6x0urTABY8EvbgHLzGiYZqZNpbreed_ids=${id}`, {
           headers: { "x-api-key": api_key },
         });
@@ -85,7 +87,7 @@ export default function BreedModal() {
         
         <p>{catBreedData && catBreedData[0].name}</p>
         <p>{catBreedData && catBreedData[0].description}</p>
-        <p>{selectedBreedImage && selectedBreedImage[0].url}</p>
+        {/* <p>{selectedBreedImage && selectedBreedImage[0].url}</p> */}
         <img src={selectedBreedImage && selectedBreedImage[0].url} width="300px"></img>
         {/* <p>{selectedBreedDetail  && selectedBreedDetail.child_friendly}</p> */}
         <Link to="/ourcats">
