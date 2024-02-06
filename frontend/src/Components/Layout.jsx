@@ -8,10 +8,14 @@ export const DataContext = createContext(null);
 export default function Layout() {
   const [globalData, setGlobalData] = useState(null);
   console.log(globalData)
+  
+  const handleLogout = () => {
+    setGlobalData(null);
+  };
 
   return (
     <DataContext.Provider value={{ globalData, setGlobalData }}>
-      <Navbar username={globalData}/>
+      <Navbar username={globalData} onLogout={handleLogout} />
       <Outlet />
       <Footer />
     </DataContext.Provider>
