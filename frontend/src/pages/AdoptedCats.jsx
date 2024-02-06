@@ -1,4 +1,4 @@
-import "./AdoptedCats.css";
+import "./AdoptedCats.scss";
 
 export default function AdoptedCats() {
   return (

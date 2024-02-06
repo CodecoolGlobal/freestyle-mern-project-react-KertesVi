@@ -3,10 +3,11 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	
   }
 
 div:nth-of-type(2n) {
-background-color: #071011;
+background-color: #845c4b;
 }
 
 .section {
@@ -22,7 +23,7 @@ h2 {
 max-width: 500px;
 margin: 20px auto; 
 padding: .5em;
-background-color: rgba(0,0,0,.8);
+background-color: rgba(132,92,75,.8);
 color: #fff;
 font: 100 1.5rem 'Work Sans', sans-serif;
 letter-spacing: 2px;
@@ -37,7 +38,7 @@ p{
 	align-content: center;
 margin:0; 
 padding: .5em;
-background-color: #071011;
+background-color: rgba(132,92,75);
 color: #fff;
 font: 100 1.5rem 'Work Sans', sans-serif;
 letter-spacing: 2px;

@@ -1,4 +1,4 @@
-import "./HomePage.scss";
+// import "./HomePage.scss";
 import OurCats from "./OurCats";
 import { Link } from "react-router-dom";
 

@@ -90,8 +90,8 @@ export default function Registration() {
             onChange={(e) => setPassword(e.target.value)}
        
           />
-          <button type="submit" >Submit your registration</button>
-          <Link to={'/login'}><button >Login</button></Link>
+          <button className="login" type="submit" >Submit your registration</button>
+          <Link to={'/login'}><button className="login" >Login</button></Link>
         </fieldset>
       </form>
     </div>

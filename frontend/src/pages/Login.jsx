@@ -1,5 +1,5 @@
 
-// import "./Login.scss";
+import "./Login.scss";
 import {  useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import HomePage from "./HomePage.jsx";
@@ -69,9 +69,9 @@ export default function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit" >Login</button>
+            <button className="login" type="submit" >Login</button>
             <Link to={"/signup"}>
-              <button>Signup</button>
+              <button className="login">Signup</button>
             </Link>
           </fieldset>
         </form>

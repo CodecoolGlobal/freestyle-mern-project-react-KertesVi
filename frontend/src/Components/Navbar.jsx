@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./navbar.css";
+import "./Navbar.scss";
 
 export default function Navbar({ username, onLogout }) {
   return (
