@@ -9,6 +9,9 @@ export default function BreedModal() {
   const [id, setId] = useState(null);
   const [selectedBreedImage, setSelectedBreedImage] = useState(null);
   const [selectedBreedDetail, setSelectedBreedDetail] = useState(null);
+
+  const [loading, setLoading] = useState(true);
+
   const breedID = useParams().id;
 
   const api_key =
@@ -30,7 +33,7 @@ export default function BreedModal() {
   const fetchBreedImage = async () => {
     try {
       console.log(id);
-      const response = await fetch(` https://api.thecatapi.com/v1/images/search?limit=11&api_key=live_qHVIRoMIeLIhQM4UQcxYiZFMd0IAFH9sm9k8MaI6x0urTABY8EvbgHLzGiYZqZNpbreed_ids=${id}`, {
+      const response = await fetch(` https://api.thecatapi.com/v1/images/search?limit=11&api_key=live_qHVIRoMIeLIhQM4UQcxYiZFMd0IAFH9sm9k8MaI6x0urTABY8EvbgHLzGiYZqZNpbreed_ids=siam`, {
         headers: { "x-api-key": api_key },
       });
       const dataJson = await response.json();
@@ -49,7 +52,7 @@ export default function BreedModal() {
 
   const fetchBreedDetails = async () => {
     try {
-      const response = await fetch(` https://api.thecatapi.com/v1/breeds/${id}`, {
+      const response = await fetch(` https://api.thecatapi.com/v1/breeds/siam`, {
         headers: { "x-api-key": api_key },
       });
       const dataJson = await response.json();
@@ -77,17 +80,20 @@ export default function BreedModal() {
       }
     };
     console.log(id);
+  
     fetchData();
     fetchBreedImage();
     fetchBreedDetails();
-
+    setLoading(false)
   }, []);
 
   
 
    
   
-
+  if (loading) {
+    return <h1>its loading</h1>
+  }
   return (
     <div  className="selectedBreed">
       <div className="catcontainer">
