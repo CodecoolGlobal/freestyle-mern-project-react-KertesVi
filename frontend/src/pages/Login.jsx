@@ -10,6 +10,7 @@ export default function Login() {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -30,7 +31,7 @@ export default function Login() {
     })
     .then((responseData) => {
       setFormSubmitted(true);
-      setUserData(responseData.user);
+      setUserData(responseData);
       setError(null);
     })
     .catch((error) => {
@@ -41,7 +42,7 @@ export default function Login() {
 
   return (
     formSubmitted ? <HomePage 
-      username={userData.username}
+      username={username}
       email={userData.email}
       phone={userData.phone}
       address={userData.address}
