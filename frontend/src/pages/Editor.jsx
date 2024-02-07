@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import CatPostForm from "../Components/CatPostForm";
 import CatUpdaterForm from "../Components/CatUpdaterForm"
 import CatTable from "../Components/CatTable";
+import "./Editor.scss"
 
 function Editor() {
   const [catData, setCatData] = useState([]);

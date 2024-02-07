@@ -1,0 +1,42 @@
+#newCatButton {
+  background-color: #b18674;
+  color: white;
+  margin: 5px;
+}
+#newCatButton:hover {
+  background-color: #845c4b;
+}
+.tableRow{
+    color: black;
+    font-size: large;
+    
+}
+
+#delete{
+    background-color: #b18674;
+}
+#delete:hover {
+    background-color: #845c4b;
+  }
+
+#update{
+    background-color: #b18674;
+}
+#update:hover {
+    background-color: #845c4b;
+  }
+
+ table {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  th {
+    border-bottom: 1px solid black;
+  }

@@ -1,18 +1,18 @@
 const CatTable = ({cats, onDelete,onUpdate}) => (
     <div className="CatTable">
-    <table>
+    <table className="table">
       <thead>
-        <tr>
+        <tr className="tableRow">
           <th>Name</th>
           <th>Sex</th>
           <th>Age</th>
           <th>Location</th>
-          <th>Pic</th>
+          <th>Picture</th>
           <th>Breed</th>
-          <th>Money</th>
+          <th>Total Donation</th>
           <th>Delete</th>
           <th>Update</th>
-          <th />
+          {/* <th /> */}
         </tr>
       </thead>
       <tbody>
@@ -27,11 +27,13 @@ const CatTable = ({cats, onDelete,onUpdate}) => (
             <td>{cat.dollars}$</td>
 
             <td>
-              <button type="button" onClick={() => onDelete(cat._id)}>
+              <button id="delete" type="button" onClick={() => onDelete(cat._id)}>
                 Delete
               </button>
-              <button type="button" onClick={() => onUpdate(cat)}>
-                Update this
+              </td>
+             <td>
+              <button id="update"type="button" onClick={() => onUpdate(cat)}>
+                Update
               </button>
             </td>
           </tr>
