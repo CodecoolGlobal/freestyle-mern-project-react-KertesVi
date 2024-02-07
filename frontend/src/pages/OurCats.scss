@@ -48,7 +48,7 @@ body {
   
   .breed {
     font-size: 0.9rem;
-    color: #845c4b;
+    color: black;
     vertical-align: middle;
   }
   
@@ -79,6 +79,8 @@ body {
     background-color: #b18674;
 	color:white;
 	margin: 5px;
+  top:0;
+  left:0;
 }
 .moreinfo:hover {
 	background-color: #845c4b;
