@@ -33,7 +33,7 @@ export default function OurCats() {
 
       <h5 className="food-list">{cat.sex}</h5>
       <h5 className="food-list">Location: {cat.location}</h5>
-      <h5 className="food-list">Supported by {cat.dollars}$</h5>
+      <h4 className="food-list">Supported by {cat.dollars}$</h4>
       <Link to={cat.breed}>
       <button className="moreinfo" value={cat.breed}>Learn more about {cat.breed}</button>
     </Link>
@@ -46,7 +46,7 @@ export default function OurCats() {
     <>
       <h1 className="app-title">We have {catData && catData.length} adoptable cats </h1>
       {catData && catData.map((cat) => petTemplate(cat))}    
-      <p className="footer">These {catData && catData.length} were added recently. Check back soon for updates.</p>
+      <h3 >These {catData && catData.length} cats were added recently. Check back soon for updates.</h3>
     </>
   );
 }
