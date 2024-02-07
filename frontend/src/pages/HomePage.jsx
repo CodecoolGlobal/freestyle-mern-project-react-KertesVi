@@ -45,14 +45,14 @@ export default function HomePage({
             <Link to={"/ourCats"}>
               <button className="custom-btn btn-16">Visitor</button>
             </Link>
-            <img src="./public/images/image5.webp" alt="catpic" width="600px" ></img>
+            <img src="./images/image5.webp" alt="catpic" width="600px" ></img>
           </div>
           <div className="card">
             <Link to={"/Login"}>
               <button className="custom-btn btn-16">Login</button>
             </Link>
             <img
-              src="./public/images/bgf8f8f8-flat750x075f-pad750x1000f8f8f8.jpg"
+              src="./images/bgf8f8f8-flat750x075f-pad750x1000f8f8f8.jpg"
               alt="catpic"
             ></img>
           </div>
