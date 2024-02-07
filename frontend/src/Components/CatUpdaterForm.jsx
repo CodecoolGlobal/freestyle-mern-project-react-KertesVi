@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./CatUpdaterForm.scss"
+
 function CatUpdaterForm(props) {
     const [ name, setName ] = useState(null)
     const [ age, setAge ] = useState(null)
@@ -32,8 +34,10 @@ function CatUpdaterForm(props) {
     }
 
     return (
-        <form onSubmit={handlePatch}>
-            <label>name:
+        <div className="containerUpdate">
+            <h1>Update Cat Data:</h1>
+        <form className="card" onSubmit={handlePatch}>
+            <label>Name:
                 <input placeholder={cat.name} type="text" value={name} onChange={e => setName(e.target.value)} />
             </label>
             <label>Age:
@@ -54,8 +58,9 @@ function CatUpdaterForm(props) {
             <label>Money:
                 <input placeholder={cat.dollars} type="number" value={dollars} onChange={e => setDollars(e.target.value)} />
             </label>
-            <button type="submit">Submit changes</button>
+            <button  type="submit">Submit changes</button>
         </form>
+        </div>
     )
 }
 export default CatUpdaterForm

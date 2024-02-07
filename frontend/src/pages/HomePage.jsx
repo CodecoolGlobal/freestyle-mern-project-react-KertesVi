@@ -20,13 +20,13 @@ export default function HomePage({
 
   return (
     <div className="HomePage">
-        <h1>Wellcome to FurrHaven</h1>
+        <h1>Welcome to PurrHaven</h1>
       {username ? (
        <div className="login-container">
        
        <form id="msform" >
          <fieldset>
-           <h1 className="fs-title">Your account details:</h1>
+           <h1 className="fs-title">My profile:</h1>
            <h3>Username: {fullname}</h3>
           <h3>Address: {address}</h3>
           <h3>Email: {email}</h3>

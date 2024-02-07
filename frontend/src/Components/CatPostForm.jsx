@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import "./CatUpdaterForm.scss"
 
 function CatPostForm({handleFinish}) {
 
@@ -31,7 +32,9 @@ function CatPostForm({handleFinish}) {
     }
 
     return (
-        <form onSubmit={handlePost}>
+        <div className="containerUpdate">
+             <h1>Add a new Cat :</h1>
+        <form className="card" onSubmit={handlePost}>
             <label>name:
                 <input type="text" value={name} onChange={e => setName(e.target.value)} />
             </label>
@@ -55,6 +58,7 @@ function CatPostForm({handleFinish}) {
             </label>
             <button type="submit">Submit new cat</button>
         </form>
+        </div>
     );
 }
 
