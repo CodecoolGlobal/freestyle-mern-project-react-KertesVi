@@ -7,7 +7,6 @@ export const DataContext = createContext(null);
 
 export default function Layout() {
   const [globalData, setGlobalData] = useState(null);
-  console.log(globalData)
   
   const handleLogout = () => {
     setGlobalData(null);

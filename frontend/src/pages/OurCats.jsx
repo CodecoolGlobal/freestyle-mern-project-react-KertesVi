@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import "./OurCats.scss";
 
 export default function OurCats() {
   const [catData, setCatData] = useState(null);
@@ -10,52 +10,43 @@ export default function OurCats() {
     const fetchData = async () => {
       try {
         const response = await fetch("/api/cats");
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
         const dataJson = await response.json();
-
         setCatData(dataJson);
-        console.log(dataJson);
-      } catch (error) {
-        console.log("Error fetching data", error);
+       } catch (error) {
+        console.error("Error fetching data", error);
       }
     };
     fetchData();
   }, []);
 
 
+  function petTemplate(cat) {
+    return (
+      <div className="animal" key={cat._id}>
+      <img className="pet-photo" src={cat.picture} alt={cat.name}/>
+      <h3 className="pet-name">{cat.name} 
+      <span className="breed">({cat.breed})</span></h3>
+      <h5><strong>Age:</strong> {cat.age}</h5>
+
+      <h5 className="food-list">{cat.sex}</h5>
+      <h5 className="food-list">Location: {cat.location}</h5>
+      <h5 className="food-list">Supported by {cat.dollars}$</h5>
+      <Link to={cat.breed}>
+      <button className="moreinfo" value={cat.breed}>Learn more about {cat.breed}</button>
+    </Link>
+      </div>
+    );
+  }
 
 
   return (
-    <div>
-      <div className="catlist">
-        {catData &&
-          catData.map((cat) => (
-
-            <div className="container" key={cat._id}>
-             
-                  <h4>Name: {cat.name} </h4>
-                <img src={cat.picture} alt={cat.name} width="30%"></img>
-                <p>{cat.sex}</p>
-                <p>Age: {cat.age}</p>
-                <p>Location: {cat.location}</p>
-                <p>Supported by {cat.dollars}$</p>
-                <p>Breed: {cat.breed}</p>
-                <Link to={cat.breed}>
-                <button value={cat.breed} >Learn more about {cat.breed}</button>
-                </Link>
-            </div>
-          ))}
-      </div>
-    </div>
-
-
-    //   /<div class="card">
-    //   <img src="img_avatar.png" alt="Avatar" style="width:100%">
-    //   <div class="container">
-    //     <h4><b>John Doe</b></h4>
-    //     <p>Architect & Engineer</p>
-    //   </div>
-    // </div>
-
-
+    <>
+      <h1 className="app-title">We have {catData && catData.length} adoptable cats </h1>
+      {catData && catData.map((cat) => petTemplate(cat))}    
+      <p className="footer">These {catData && catData.length} were added recently. Check back soon for updates.</p>
+    </>
   );
 }

@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    background-color: #dedede;
+    color: #333;
+    padding: 20px 0 28px 0;
+    margin: 0;
+  }
+
+
+//   p{
+//     background-color: white;
+//     color: black;
+//   }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .app-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.6rem;
+  }
+  
+  .animal {
+    max-width: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+   
+  .pet-photo {
+    float: left;
+    width: 40%;
+    margin-right: 15px;
+  }
+  
+  .pet-name {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+  }
+  
+  .breed {
+    font-size: 0.9rem;
+    color: #845c4b;
+    vertical-align: middle;
+  }
+  
+  .foods-list {
+    margin: 25px;
+    padding: 25px;
+    position: relative;
+    left: 17px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    background-color: white;
+    color: black;
+  }
+  
+  .footer {
+    font-size: 0.7rem;
+    color: white;
+    text-align: center;
+    margin: 25px;
+  }
+  .animal:nth-of-type(odd) {
+    background-color: white;
+    }
+    .animal:nth-of-type(2n) {
+        background-color: white;
+        }
+.moreinfo {
+    background-color: #b18674;
+	color:white;
+	margin: 5px;
+}
+.moreinfo:hover {
+	background-color: #845c4b;
+  }

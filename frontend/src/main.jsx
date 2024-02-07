@@ -27,7 +27,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="ourcats" element={<Ourcats />}></Route>
           <Route path="editor" element={<Editor />}></Route>
           <Route path="login" element={<Login />}></Route>
-        <Route path="ourcats/:id" element={<BreedModal/>}></Route>
+          <Route path="ourcats/:id" element={<BreedModal/>}></Route>
+          {/* <Route path="update/:userId" element={<UpdateUser/>}></Route> */}
         </Route>
     
       </Routes>
