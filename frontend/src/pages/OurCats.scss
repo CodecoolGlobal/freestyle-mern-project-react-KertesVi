@@ -6,12 +6,6 @@ body {
     margin: 0;
   }
 
-
-//   p{
-//     background-color: white;
-//     color: black;
-//   }
-  
   img {
     max-width: 100%;
     height: auto;
@@ -48,13 +42,15 @@ body {
   
   .breed {
     font-size: 0.9rem;
-    color: #845c4b;
+    color: black;
     vertical-align: middle;
   }
   
+  h5 {
+    margin: 2px;
+    padding: 2px;
+  }
   .foods-list {
-    margin: 25px;
-    padding: 25px;
     position: relative;
     left: 17px;
     font-size: 0.85rem;
@@ -65,7 +61,7 @@ body {
   
   .footer {
     font-size: 0.7rem;
-    color: white;
+    color: #845c4b;
     text-align: center;
     margin: 25px;
   }
@@ -78,7 +74,9 @@ body {
 .moreinfo {
     background-color: #b18674;
 	color:white;
-	margin: 5px;
+	margin: 10px;
+  bottom:0;
+  right:0;
 }
 .moreinfo:hover {
 	background-color: #845c4b;

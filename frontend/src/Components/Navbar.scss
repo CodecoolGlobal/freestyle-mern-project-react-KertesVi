@@ -1,5 +1,7 @@
 .Navbar {
-  display: flex;
+  // background-color: #b18674;
+  // display: flex;
+  margin: 0;
   justify-content: space-around;
   align-items: center;
   padding: 1rem; 
@@ -17,12 +19,14 @@
 
 .Navbar button {
   background-color: #b18674;
-  color: #000000;
-  border: none;
+  color: white;
+  border: #845c4b;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 20px;
+  margin: 2px;
 }
 
 .Navbar button:hover {

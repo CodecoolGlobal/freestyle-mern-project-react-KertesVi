@@ -47,7 +47,7 @@ export default function OurCats() {
     <>
       <h1 className="app-title">We have {catData && catData.length} adoptable cats </h1>
       {catData && catData.map((cat) => petTemplate(cat))}    
-      <p className="footer">These {catData && catData.length} were added recently. Check back soon for updates.</p>
+      <h3 >These {catData && catData.length} cats were added recently. Check back soon for updates.</h3>
     </>
   );
 }
