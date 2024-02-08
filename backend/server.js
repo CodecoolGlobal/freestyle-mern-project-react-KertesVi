@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import express from "express";
 import cat from "./model/cat.js";
-// import DBString from "./DBString.js";
+import DBString from "./DBString.js";
 import User from "./model/Users.js";
 
 const PORT = 4000;
@@ -10,7 +10,7 @@ app.use(express.json());
 
 try {
   await mongoose.connect(
-    "mongodb+srv://kerteszviki:TafT34ZToXZAUKjw@cluster0.rmusfpm.mongodb.net/MERNProject"
+    DBString
   )
   console.log("MongoDB connected")
   app.listen(PORT, () => {
@@ -20,7 +20,6 @@ try {
   console.error(error);
 }
 
-// mongoose.connect(DBString);
 
 app.post("/api/signup", (req, res) => {
   const { username, email, password, phone, address, fullname } = req.body;
