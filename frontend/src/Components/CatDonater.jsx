@@ -17,6 +17,7 @@ const CatDonater = ({cat,fetchData}) =>{
           })
         .then((res) => res.json())
         .then(fetchData())
+        .then(alert(`Thank you for donating ${donationAmount}$ for ${cat.name}!`))
       };
 
     return <div>
