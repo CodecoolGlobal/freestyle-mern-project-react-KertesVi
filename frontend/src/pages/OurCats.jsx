@@ -26,8 +26,9 @@ export default function OurCats() {
 
   function petTemplate(cat) {
     return (
+    
       <div className="animal" key={cat._id}>
-      <img className="pet-photo" src={cat.picture} alt={cat.name}/>
+     <img className="pet-photo" src={cat.picture} alt={cat.name}/>
       <h3 className="pet-name">{cat.name} 
       <span className="breed">({cat.breed})</span></h3>
       <h5><strong>Age:</strong> {cat.age}</h5>

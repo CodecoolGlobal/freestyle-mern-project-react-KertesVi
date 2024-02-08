@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import  "./Breed.css";
+import "./Breed.scss"
+
 
 
 export default function BreedModal() {
@@ -82,18 +83,18 @@ export default function BreedModal() {
   }
   
   return (
-    <div  className="selectedBreed">
-      <div className="catcontainer">
-        
-        <p>{selectedBreedDetail  && selectedBreedDetail.name}</p>
+   
+      <div id="circle-shape-example">
+         <img  className="curve" src={selectedBreedImage && selectedBreedImage[0].url} ></img>
+        <h1 >{selectedBreedDetail  && selectedBreedDetail.name}</h1>
         <p>{selectedBreedDetail  && selectedBreedDetail.description}</p> 
         {/* <p>{selectedBreedImage && selectedBreedImage[0].url}</p> */}
-        <img src={selectedBreedImage && selectedBreedImage[0].url} width="300px"></img>
+       
         {/* <p>{selectedBreedDetail  && selectedBreedDetail.child_friendly}</p> */}
         <Link to="/ourcats">
-                <button  >Back to adoptable cats</button>
+                <button className="back" >Back to adoptable cats</button>
                 </Link>
       </div>
-    </div>
+ 
   );
 }

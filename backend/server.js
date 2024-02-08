@@ -138,4 +138,3 @@ app.patch("/api/cats/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// app.listen(3000, () => console.log('Server started on http://localhost:3000/'))

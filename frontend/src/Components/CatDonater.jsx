@@ -25,7 +25,7 @@ const CatDonater = ({cat,fetchData}) =>{
          <label>Amount to donate:
                 <input type="text" value={donationAmount} onChange={e => setDonationAmount(e.target.value)} />
             </label>
-        <button type="button" onClick={() =>donateMoney(cat,donationAmount)}>Donate!</button>
+        <button className="moreinfo" type="button" onClick={() =>donateMoney(cat,donationAmount)}>Donate!</button>
     </div>
 
 }

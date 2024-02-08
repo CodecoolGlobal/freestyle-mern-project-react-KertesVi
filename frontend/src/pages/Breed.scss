@@ -1,8 +1,47 @@
-.catcontainer {
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10vmin;
-  overflow: hidden;
-  transform: skew(5deg);
+// .catcontainer {
+//     display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 10vmin;
+//   overflow: hidden;
+//   transform: skew(5deg);
+// }
+
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+#circle-shape-example {
+  font-family: 'Open Sans', sans-serif;
+  margin: 2rem;
 }
+
+.circle-shape-example p {
+  line-height: 1.8; 
+  background-color: #a17a69;
+  color: black;
+  font: 100 1.5rem 'Work Sans', sans-serif;
+  letter-spacing: 2px;
+  line-height: 2;
+  text-transform: none; 
+  align-content: flex-start;
+}
+
+
+#circle-shape-example .curve {
+  width: 43%;
+  height: auto;
+  min-width: 150px;
+  float: left;
+  margin-right: 20rem;
+  border-radius: 40%;
+  -webkit-shape-outside: circle();
+  shape-outside: circle();
+}
+
+.back{
+	background-color: #b18674;
+	color:white;
+    margin: 5px;
+}
+.back:hover {
+	background-color: #845c4b;
+  }
