@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./OurCats.scss";
+import CatDonater from "../Components/CatDonater";
 
 export default function OurCats() {
   const [catData, setCatData] = useState(null);
   // const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/cats");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const dataJson = await response.json();
-        setCatData(dataJson);
-       } catch (error) {
-        console.error("Error fetching data", error);
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/api/cats");
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
       }
-    };
+      const dataJson = await response.json();
+      setCatData(dataJson);
+     } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  };
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -33,7 +34,7 @@ export default function OurCats() {
 
       <h5 className="food-list">{cat.sex}</h5>
       <h5 className="food-list">Location: {cat.location}</h5>
-      <h4 className="food-list">Supported by {cat.dollars}$</h4>
+      <CatDonater cat={cat} fetchData={fetchData}/>
       <Link to={cat.breed}>
       <button className="moreinfo" value={cat.breed}>Learn more about {cat.breed}</button>
     </Link>
